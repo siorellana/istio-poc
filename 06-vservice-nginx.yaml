@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: web-virtualservice
+  namespace: test-nginx
+spec:
+  hosts:
+  - “*”
+  gateways:
+  - httpbin-gateway
+  http:
+  - route:
+    - destination:
+        host: nginx-svc
+
+
+// NOT USED
