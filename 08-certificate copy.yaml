@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1beta1
+kind: ManagedCertificate
+metadata:
+  name: ingress-certificate
+  namespace: istio-system
+spec:
+  domains:
+    - istio-poc-rr.xp.latam.com

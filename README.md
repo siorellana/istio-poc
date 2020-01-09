@@ -39,9 +39,7 @@ gcloud beta container clusters create $CLUSTER \
 
 ## Change the Istio Ingress to use the K8S Ingress
 ```
-kubectl -n istio-system patch svc istio-ingressgateway \
-    --type=json -p="$(cat istio-ingressgateway-patch.json)" \
-    --dry-run=true -o yaml | kubectl apply -f -
+kubectl -n istio-system patch svc istio-ingressgateway --type=json -p="$(cat istio-ingressgateway-patch.json)" --dry-run=true -o yaml | kubectl apply -f -
 ```
 
 ## Ejecutar los manifiestos en el siguiente orden
@@ -57,13 +55,13 @@ kubectl apply -f 05-service.yaml
 
 APP2
 ```
-kubectl apply -f 11-namespace-app2.yaml
-kubectl apply -f 09-deployment-app2.yaml
+kubectl apply -f 09-namespace-app2.yaml
+kubectl apply -f 11-deployment-app2.yaml
 kubectl apply -f 10-service-app2.yaml
 ```
 
 ## Enable the namespace to use istio envoy
-`kubectl label namespace test-nginx istio-injection=enabled`
+`kubectl label namespace app3 istio-injection=enabled`
 
 ## Comandos útiles
 kubectl describe pod
