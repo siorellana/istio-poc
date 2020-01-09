@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: httpbin-gateway
-  namespace: test-nginx
+  namespace: istio-system # Must be app namespace
 spec:
   selector:
     istio: ingressgateway # use Istio default gateway implementation

@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: health
-  namespace: test-nginx
+  namespace: istio-system # must be app namespace
 spec:
   gateways:
   - httpbin-gateway
@@ -25,14 +25,3 @@ spec:
         host: istio-ingressgateway.istio-system.svc.cluster.local
         port:
           number: 15020
-  - match:
-    - uri:
-        exact: "/app1/hola"
-    route:
-    - destination:
-        host: app2.app2.svc.cluster.local
-        port:
-          number: 80
-  - route:
-    - destination:
-        host: nginx-svc
