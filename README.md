@@ -77,10 +77,11 @@ kubectl apply -f 18-certificate-app3.yaml
 `kubectl label namespace app3 istio-injection=enabled`
 
 ## Comandos útiles
+```
 kubectl describe pod
 kubectl describe managedcertificate
 kubectl get ingress my-ingress -n istio-system
-
+```
 
 TODO: Gateway y Virtualservice crear en Namespace específico.
 
