@@ -70,7 +70,6 @@ kubectl apply -f 15-my-gateway-app3.yaml
 kubectl apply -f 16-my-ingress-app3.yaml
 kubectl apply -f 17-istio-virtualsvc-app3.yaml
 kubectl apply -f 18-certificate-app3.yaml
-
 ```
 
 ## Habilitar istio en namesoace
