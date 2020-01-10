@@ -83,4 +83,5 @@ kubectl get ingress my-ingress -n istio-system
 
 
 TODO: Gateway y Virtualservice crear en Namespace específico.
+
 TODO: Crear DNS de manera automática.
