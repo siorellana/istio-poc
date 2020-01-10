@@ -7,7 +7,7 @@ spec:
   gateways:
   - app3-gateway
   hosts:
-  - "istio-poc-app3.xp.latam.com"
+  - "istio-poc-app3.example.com"
   http:
   - match:
     - headers:

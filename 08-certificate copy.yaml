@@ -5,4 +5,4 @@ metadata:
   namespace: istio-system
 spec:
   domains:
-    - istio-poc-rr.xp.latam.com
+    - istio-poc-rr.example.com

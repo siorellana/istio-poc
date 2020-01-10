@@ -12,7 +12,7 @@ metadata:
     kubernetes.io/ingress.allow-http: "false"
 spec:
   rules:
-  - host: istio-poc-app3.xp.latam.com
+  - host: istio-poc-app3.example.com
     http:
       paths:
       - path: /*
