@@ -61,6 +61,18 @@ kubectl apply -f 11-deployment-app2.yaml
 kubectl apply -f 10-service-app2.yaml
 ```
 
+APP3 With Files Configuration On Same Namespace
+```
+kubectl apply -f 12-namespace-app3.yaml
+kubectl apply -f 13-service-app3.yaml
+kubectl apply -f 14-deployment-app3.yaml
+kubectl apply -f 15-my-gateway-app3.yaml
+kubectl apply -f 16-my-ingress-app3.yaml
+kubectl apply -f 17-istio-virtualsvc-app3.yaml
+kubectl apply -f 18-certificate-app3.yaml
+
+```
+
 ## Enable the namespace to use istio envoy
 `kubectl label namespace app3 istio-injection=enabled`
 
