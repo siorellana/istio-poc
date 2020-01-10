@@ -38,7 +38,7 @@ gcloud beta container clusters create $CLUSTER \
     --zone $ZONE
 ```
 
-## Change the Istio Ingress to use the K8S Ingress
+## Cambiar tipo de ingress de Istio a Nodeport para utilizar el de K8S
 ```
 kubectl -n istio-system patch svc istio-ingressgateway --type=json -p="$(cat istio-ingressgateway-patch.json)" --dry-run=true -o yaml | kubectl apply -f -
 ```
@@ -61,7 +61,7 @@ kubectl apply -f 11-deployment-app2.yaml
 kubectl apply -f 10-service-app2.yaml
 ```
 
-APP3 With Files Configuration On Same Namespace
+APP3 - Con Manifiestos en el mismo espacio de nombres
 ```
 kubectl apply -f 12-namespace-app3.yaml
 kubectl apply -f 13-service-app3.yaml
@@ -73,7 +73,7 @@ kubectl apply -f 18-certificate-app3.yaml
 
 ```
 
-## Enable the namespace to use istio envoy
+## Habilitar istio en namesoace
 `kubectl label namespace app3 istio-injection=enabled`
 
 ## Comandos útiles
